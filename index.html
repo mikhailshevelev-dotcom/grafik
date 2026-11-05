@@ -2,15 +2,16 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>График отдела оформления</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&subset=cyrillic&display=swap">
 <style>
-:root{--bg:#f5f6f9;--sf:#fff;--tx:#1c2230;--mu:#687086;--bd:#e0e4ec;--ac:#2f6fed;--we:#eceff5;
+:root{--bg:#f5f6f9;--sf:#fff;--tx:#1c2230;--mu:#687086;--bd:#e0e4ec;--ac:var(--al);--we:#eceff5;
 --w:#d4efdb;--wt:#17662f;--u:#c9edf0;--ut:#0d6770;--o:#ffe0ad;--ot:#845000;--b:#ffcdcd;--bt:#992020;--d:#e2d5fa;--dt:#5628a3;--v:#dfe3ec;--vt:#4d5566;--bad:#ffd9d9;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171d;--sf:#1d2129;--tx:#e8ebf2;--mu:#9aa2b5;--bd:#2d3340;--ac:#6c9bff;--we:#252a34;--w:#1f4a2c;--wt:#9fe0b4;--u:#14484d;--ut:#8fdbe2;--o:#5a3d0b;--ot:#ffd391;--b:#5a2323;--bt:#ffb3b3;--d:#3b2c63;--dt:#cdb6ff;--v:#343a47;--vt:#b4bbcb;--bad:#5a2323}}
-:root[data-theme="dark"]{--bg:#14171d;--sf:#1d2129;--tx:#e8ebf2;--mu:#9aa2b5;--bd:#2d3340;--ac:#6c9bff;--we:#252a34;--w:#1f4a2c;--wt:#9fe0b4;--u:#14484d;--ut:#8fdbe2;--o:#5a3d0b;--ot:#ffd391;--b:#5a2323;--bt:#ffb3b3;--d:#3b2c63;--dt:#cdb6ff;--v:#343a47;--vt:#b4bbcb;--bad:#5a2323}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171d;--sf:#1d2129;--tx:#e8ebf2;--mu:#9aa2b5;--bd:#2d3340;--ac:var(--ad);--we:#252a34;--w:#1f4a2c;--wt:#9fe0b4;--u:#14484d;--ut:#8fdbe2;--o:#5a3d0b;--ot:#ffd391;--b:#5a2323;--bt:#ffb3b3;--d:#3b2c63;--dt:#cdb6ff;--v:#343a47;--vt:#b4bbcb;--bad:#5a2323}}
+:root[data-theme="dark"]{--bg:#14171d;--sf:#1d2129;--tx:#e8ebf2;--mu:#9aa2b5;--bd:#2d3340;--ac:var(--ad);--we:#252a34;--w:#1f4a2c;--wt:#9fe0b4;--u:#14484d;--ut:#8fdbe2;--o:#5a3d0b;--ot:#ffd391;--b:#5a2323;--bt:#ffb3b3;--d:#3b2c63;--dt:#cdb6ff;--v:#343a47;--vt:#b4bbcb;--bad:#5a2323}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:12px}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.4 Montserrat,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:12px}
 h1{font-size:18px;margin:0 0 10px}
 .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
 button,select,input{font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--bd);border-radius:8px;padding:6px 10px}
@@ -60,8 +61,21 @@ tr.cov th.n{z-index:3}td.bad{background:var(--bad)!important}
 .strip i.sw{background:var(--wt)}.strip i.su{background:var(--ut)}.strip i.so{background:var(--ot)}.strip i.sb{background:var(--bt)}.strip i.sd{background:var(--dt)}.strip i.sv{background:var(--vt)}
 th.n[data-p]{cursor:pointer}th.n a{color:var(--ac)}
 @media (max-width:700px){body{padding:8px}.pm{align-items:flex-end;padding:0}.sheet{max-width:none;border-radius:16px 16px 0 0;max-height:92%;padding-bottom:calc(14px + env(safe-area-inset-bottom,0px))}th.n{min-width:130px}}
+:root{--al:#c7017f;--ad:#e0399f;--g:linear-gradient(90deg,#831f82,#c7017f 60%,#e30613)}
+:root[data-scheme="business"]{--al:#29303e;--ad:#6b7ba3;--g:linear-gradient(90deg,#29303e,#3f495e)}
+:root[data-scheme="berry"]{--al:#951b81;--ad:#b8509f;--g:linear-gradient(90deg,#951b81,#6f1260)}
+.hd{background:var(--g);color:#fff;border-radius:12px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.hd h1{margin:0;color:#fff}
+.hd button{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);color:#fff;font-size:12px;padding:5px 10px}
+.hd button.on{background:#fff;color:#29303e;border-color:#fff}
+.sc i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:1px solid rgba(255,255,255,.8)}
+tr.gh td{background:var(--we);text-align:left;padding:6px 10px;font-weight:700;font-size:12px;border-right:0}
+tr.gh.l td{background:var(--g);color:#fff}
+tr.gh span{position:sticky;left:10px}
+.gt2{grid-column:1/-1;margin:6px 0 0;font-size:13px;padding:6px 10px;border-radius:8px;background:var(--we)}
+.gt2.l{background:var(--g);color:#fff}
 </style></head><body>
-<h1>График отдела оформления</h1>
+<div class="hd"><h1>График отдела оформления</h1><div class="chips"><button class="sc" data-sc="comfort" title="Комфорт — градиент"><i style="background:linear-gradient(135deg,#831f82,#c7017f,#e30613)"></i>Комфорт</button><button class="sc" data-sc="business" title="Бизнес — графит"><i style="background:#29303e"></i>Бизнес</button><button class="sc" data-sc="berry" title="Черничный"><i style="background:#951b81"></i>Черничный</button><button id="tg" title="Тема оформления"></button></div></div>
 <div class="bar">
 <button id="pv" aria-label="Предыдущий месяц">←</button><select id="ms"></select><button id="nx" aria-label="Следующий месяц">→</button><button id="tdy">Сегодня</button>
 <input type="search" id="q" placeholder="Поиск по сотруднику"><span class="chips"><button id="vl">Список</button><button id="vt">Таблица</button></span>
@@ -107,7 +121,8 @@ const days=[];for(let d=1;d<=M.n;d++){const w=new Date(M.y,M.m-1,d).getDay();con
 const isT=d=>M.k===key&&d===now.getDate();
 let h='<table><thead><tr><th class="n">Сотрудник</th>'+days.map(x=>`<th data-d="${x.d}" class="${x.we?'we':''} ${isT(x.d)?'td':''} ${x.d===sel?'sel':''}">${x.d}<small>${WD[x.w]}</small></th>`).join('')+'<th class="st" title="Работал/удалённо">Р</th><th class="st">О</th><th class="st">Б</th><th class="st">Д</th></tr></thead><tbody>';
 const cnt=(s,ch)=>[...s].filter(c=>ch.includes(c)).length;
-for(const r of rows){h+=`<tr><th class="n" data-p="${r[0]}"><a>${r[0]}</a><small>${r[1]}</small></th>`+days.map(x=>{const c=r[2][x.d-1];const st=ST[c];
+const gh=(t,n,l)=>`<tr class="gh${l?' l':''}"><td colspan="${days.length+5}"><span>${t} · ${n}</span></td></tr>`;const gl=rows.filter(isL),go=rows.filter(r=>!isL(r));
+for(const r of [...gl,...go]){if(r===gl[0])h+=gh('Ведущие менеджеры отдела оформления',gl.length,1);if(r===go[0])h+=gh('Менеджеры',go.length,0);h+=`<tr><th class="n" data-p="${r[0]}"><a>${r[0]}</a><small>${r[1]}</small></th>`+days.map(x=>{const c=r[2][x.d-1];const st=ST[c];
  return `<td class="c ${st?st[1]:''} ${!st&&x.we?'we':''} ${x.d===sel?'sel':''}" data-s="${c}" title="${r[0]}, ${x.d} ${MN[M.m-1].toLowerCase()}: ${st?st[0]:'выходной'}">${c==='.'?'':c}</td>`}).join('')
  +`<td class="st">${cnt(r[2],'РУ')}</td><td class="st">${cnt(r[2],'О')}</td><td class="st">${cnt(r[2],'Б')}</td><td class="st">${cnt(r[2],'Д')}</td></tr>`}
 if(!rows.length)h+='<tr><td colspan="40" style="padding:16px">Никого не найдено</td></tr>';
@@ -124,13 +139,23 @@ $('day').innerHTML=p;drawList(rows);
 const th=$('tb').querySelector('th.td,th.sel');if(th&&!render.s){render.s=1;th.scrollIntoView({inline:'center',block:'nearest'})}
 }
 let view=innerWidth<700?'list':'table',pn='',pi=0;
+const LEAD=['Муратова Айгуль','Караник Кристина','Пономарева Анна'],isL=r=>LEAD.includes(r[0]);
+let sc='comfort',th='auto';
+try{const s=(localStorage.getItem('look')||'').split('|');if(['comfort','business','berry'].includes(s[0]))sc=s[0];if(['auto','light','dark'].includes(s[1]))th=s[1]}catch(e){}
+function applyLook(){const R=document.documentElement;R.dataset.scheme=sc;if(th==='auto')R.removeAttribute('data-theme');else R.dataset.theme=th;
+ document.querySelectorAll('.sc').forEach(b=>b.classList.toggle('on',b.dataset.sc===sc));$('tg').textContent={auto:'Тема: авто',light:'Тема: светлая',dark:'Тема: тёмная'}[th];
+ try{localStorage.setItem('look',sc+'|'+th)}catch(e){}}
+document.querySelectorAll('.sc').forEach(b=>b.onclick=()=>{sc=b.dataset.sc;applyLook()});
+$('tg').onclick=()=>{th={auto:'light',light:'dark',dark:'auto'}[th];applyLook()};
+applyLook();
 const fmt=d=>d.toLocaleDateString('ru-RU',{day:'numeric',month:'short'});
 $('vt').onclick=()=>{view='table';render()};$('vl').onclick=()=>{view='list';render()};
 function drawList(rows){
  $('tb').style.display=view==='table'?'':'none';$('pl').style.display=view==='list'?'':'none';
  $('vt').classList.toggle('on',view==='table');$('vl').classList.toggle('on',view==='list');
- $('pl').innerHTML=rows.map(r=>{const c=r[2][sel-1],st=ST[c];
-  return `<button class="pr" data-p="${r[0]}"><span class="pt"><b>${r[0]}</b><small>${r[1]}</small><span class="nm ${st?st[1]:'sx'}">${st?st[0]:'Выходной'}</span></span><span class="strip">${[...r[2]].map((x,i)=>`<i class="${ST[x]?ST[x][1]:''} ${i+1===sel?'cur':''}"></i>`).join('')}</span></button>`}).join('')||'<div class="card">Никого не найдено</div>';
+ const rs=[...rows.filter(isL),...rows.filter(r=>!isL(r))],f1=rs.find(isL),f2=rs.find(r=>!isL(r));
+ $('pl').innerHTML=rs.map(r=>{const c=r[2][sel-1],st=ST[c];
+  return (r===f1?'<h3 class="gt2 l">Ведущие менеджеры отдела оформления</h3>':'')+(r===f2?'<h3 class="gt2">Менеджеры</h3>':'')+`<button class="pr" data-p="${r[0]}"><span class="pt"><b>${r[0]}</b><small>${r[1]}</small><span class="nm ${st?st[1]:'sx'}">${st?st[0]:'Выходной'}</span></span><span class="strip">${[...r[2]].map((x,i)=>`<i class="${ST[x]?ST[x][1]:''} ${i+1===sel?'cur':''}"></i>`).join('')}</span></button>`}).join('')||'<div class="card">Никого не найдено</div>';
 }
 $('pl').onclick=e=>{const b=e.target.closest('[data-p]');if(b)openP(b.dataset.p)};
 function openP(n){pn=n;pi=mi;drawP();$('pm').hidden=false;document.body.style.overflow='hidden'}
@@ -149,7 +174,7 @@ function drawP(){
   cells+=`<div class="cd ${st?st[1]:(w%6===0?'we':'')} ${M.k===key&&d===now.getDate()?'tdy':''}" data-pd="1" title="${d} ${MN[M.m-1].toLowerCase()} — ${st?st[0]:'выходной'}"><span>${d}</span><b>${c==='.'?'':c}</b></div>`}
  const n=ch=>[...s].filter(c=>ch.includes(c)).length;
  const rg=(ch,t)=>{const a=ranges(pn,ch);return a.length?`<div class="grp"><b>${t}</b><i>${a.map(x=>fmt(x[0])+(x[1]-x[0]?' – '+fmt(x[1]):'')+' ('+x[2]+' дн.)').join(' · ')}</i></div>`:''};
- $('pm').innerHTML=`<div class="sheet"><div class="sh"><div><h2>${pn}</h2><small>${r?CITY[r[1]]:''}</small></div><button data-x="1" aria-label="Закрыть">✕</button></div>
+ $('pm').innerHTML=`<div class="sheet"><div class="sh"><div><h2>${pn}</h2><small>${r?CITY[r[1]]:''}${LEAD.includes(pn)?' · ведущий менеджер':''}</small></div><button data-x="1" aria-label="Закрыть">✕</button></div>
  <div class="bar"><button data-pm="-1">←</button><b class="mt">${MN[M.m-1]} ${M.y}</b><button data-pm="1">→</button></div>
  ${r?`<div class="chips st2"><span class="nm sw">Работал(а): ${n('РУ')}</span><span class="nm so">Отпуск: ${n('О')}</span><span class="nm sb">Больничный: ${n('Б')}</span><span class="nm sd">Дежурств: ${n('Д')}</span></div>`:'<div class="note">В этом месяце сотрудника нет в графике</div>'}
  <div class="cal">${WD.slice(1).concat('Вс').map(x=>`<div class="ch">${x}</div>`).join('')}${cells}</div>
